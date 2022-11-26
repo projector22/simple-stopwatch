@@ -18,7 +18,7 @@
 
 /* exported init */
 
-const GETTEXT_DOMAIN = 'my-indicator-extension';
+const GETTEXT_DOMAIN = 'Simple Stopwatch';
 
 const { GObject, St } = imports.gi;
 
@@ -32,18 +32,27 @@ const _ = ExtensionUtils.gettext;
 const Indicator = GObject.registerClass(
 class Indicator extends PanelMenu.Button {
     _init() {
-        super._init(0.0, _('My Shiny Indicator'));
+        this.counter = 0;
+
+        super._init(0.0, _('Simple Stopwatch'));
 
         this.add_child(new St.Icon({
-            icon_name: 'face-smile-symbolic',
+            icon_name: 'alarm-symbolic',
             style_class: 'system-status-icon',
         }));
 
         let item = new PopupMenu.PopupMenuItem(_('Show Notification'));
-        item.connect('activate', () => {
-            Main.notify(_('Whatʼs up, folks?'));
-        });
+        item.
+
+
+        // item.connect('activate', () => {
+        //     Main.notify(_('Cheesecake'));
+        // });
         this.menu.addMenuItem(item);
+    }
+
+    setButtonText() {
+        this.counter++
     }
 });
 
