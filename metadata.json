@@ -1,0 +1,10 @@
+{
+  "name": "Simple Stopwatch",
+  "description": "Provide a simple interactive stopwatch for timing tasks.",
+  "uuid": "simple-stopwatch@evangelismtheology.com",
+  "shell-version": [
+    "43"
+  ],
+  "url": "https://github.com/projector22/simple-stopwatch",
+  "version": 1
+}
